@@ -5,11 +5,11 @@ import (
   "time" 
 ) 
 func recoverError() {  
-    if r := recover(); r!= nil {
+	if r := recover(); r!= nil {
 		rollbar.Critical(r)
-        fmt.Println(r)
+		fmt.Println(r)
 		rollbar.Wait()	
-    }
+	}
 }
 
 func main() {
